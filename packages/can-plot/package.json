@@ -1,0 +1,55 @@
+{
+  "name": "@csselectronics/can-plot",
+  "version": "0.1.0",
+  "description": "Live time-series charts for CAN signal data from CANsub.",
+  "keywords": [
+    "cansub",
+    "can-bus",
+    "can-fd",
+    "css-electronics",
+    "charts",
+    "time-series"
+  ],
+  "type": "module",
+  "private": true,
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./src/index.ts"
+    },
+    "./preact": {
+      "types": "./dist/preact/index.d.ts",
+      "default": "./src/preact/index.ts"
+    },
+    "./engine": {
+      "types": "./dist/engine/index.d.ts",
+      "default": "./src/engine/index.ts"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "default": "./src/*"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "node ../../scripts/build-package.mjs ."
+  },
+  "dependencies": {
+    "uplot": "^1.6.32"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "preact": "^10.24.3"
+  },
+  "peerDependencies": {
+    "preact": "^10.24.3"
+  },
+  "peerDependenciesMeta": {
+    "preact": {
+      "optional": true
+    }
+  },
+  "license": "SEE LICENSE IN LICENSE"
+}

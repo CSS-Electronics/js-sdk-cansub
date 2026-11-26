@@ -1,0 +1,36 @@
+Copyright CSS Electronics ApS. All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to use,
+copy, modify, and distribute the Software, subject to the following conditions:
+
+1. HARDWARE RESTRICTION. The Software, including any modified versions,
+   derivative works, or substantially similar implementations based on or
+   derived from the Software, may only be used in conjunction with hardware
+   products manufactured or sold by CSS Electronics ApS (including but not
+   limited to CANsub, CANmod, CANedge, and CLX000 devices).
+
+2. PROHIBITED USE. Use of the Software, or any modified version, adaptation,
+   translation, or derivative work based on or incorporating any portion of
+   the Software, with hardware or software products not manufactured or sold
+   by CSS Electronics ApS is expressly prohibited without prior written
+   consent from CSS Electronics ApS.
+
+3. DERIVATIVE WORKS. Any modified version or derivative work of the Software
+   remains subject to all terms and conditions of this license. The hardware
+   restriction in Section 1 applies regardless of the extent of modification,
+   refactoring, or reimplementation.
+
+4. COMPILED FORMS. Portions of the Software that CSS Electronics ApS
+   distributes only in compiled or minified form may not be decompiled,
+   de-minified, or otherwise reverse engineered.
+
+5. NOTICE. This copyright notice and permission notice shall be included in
+   all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+CSS ELECTRONICS APS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

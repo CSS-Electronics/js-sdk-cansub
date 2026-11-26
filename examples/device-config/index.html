@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CANsub App - Device Configuration</title>
+  <link rel="icon" type="image/png" href="../../shared/favicon.png" />
+  <style>
+    #log { font-family: var(--cs-mono); line-height: 1.8; }
+    #log .ok { color: #16a34a; }
+    #log .err { color: var(--cs-error); }
+    #log .info { color: var(--cs-muted); }
+  </style>
+</head>
+<body>
+  <main class="cs-main" style="max-width: 900px">
+    <h1>Device configuration</h1>
+    <p class="cs-subtitle">Configure the device through the REST API only (<code>@csselectronics/rest-client</code>), without the UI kit or a frame stream: Read the device info, sync the device time and set the bit rate of the chosen channel.</p>
+    <div id="connect-bar"></div>
+    <div id="log" class="cs-card"></div>
+  </main>
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>

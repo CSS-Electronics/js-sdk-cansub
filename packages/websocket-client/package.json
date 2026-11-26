@@ -1,0 +1,38 @@
+{
+  "name": "@csselectronics/websocket-client",
+  "version": "0.1.0",
+  "description": "WebSocket client for CSS Electronics CANsub CAN/CAN FD interfaces: streams CAN frames from the device via a Web Worker.",
+  "keywords": [
+    "cansub",
+    "can-bus",
+    "can-fd",
+    "css-electronics",
+    "websocket",
+    "can-frames"
+  ],
+  "type": "module",
+  "private": true,
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "default": "./src/*"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "node ../../scripts/build-package.mjs ."
+  },
+  "dependencies": {
+    "@preact/signals-core": "^1.12.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "license": "SEE LICENSE IN LICENSE"
+}

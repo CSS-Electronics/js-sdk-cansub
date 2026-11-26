@@ -1,0 +1,35 @@
+{
+  "name": "@csselectronics/rest-client",
+  "version": "0.1.0",
+  "description": "REST API client for configuring CSS Electronics CANsub CAN/CAN FD interfaces.",
+  "keywords": [
+    "cansub",
+    "can-bus",
+    "can-fd",
+    "css-electronics",
+    "rest-api",
+    "configuration"
+  ],
+  "type": "module",
+  "private": true,
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "default": "./src/*"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "node ../../scripts/build-package.mjs ."
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "license": "SEE LICENSE IN LICENSE"
+}

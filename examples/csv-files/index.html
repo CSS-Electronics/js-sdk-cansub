@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CANsub App - CSV Files</title>
+  <link rel="icon" type="image/png" href="../../shared/favicon.png" />
+</head>
+<body>
+  <div class="cs-app">
+    <aside id="sidebar"></aside>
+    <main class="cs-main">
+      <h1>CSV files</h1>
+      <p class="cs-subtitle">Export the stored frames as CSV, or import a CSV file, in webCAN's raw trace format.</p>
+      <section class="cs-card">
+        <h2 class="cs-section-title">Export</h2>
+        <div class="cs-row">
+          <span class="cs-muted">Stored frames: <b id="stored">0</b></span>
+          <button id="export" class="cs-btn" disabled>Export CSV</button>
+        </div>
+      </section>
+      <section class="cs-card">
+        <h2 class="cs-section-title">Import</h2>
+        <div id="drop" class="cs-drop">Drop a CSV file here or <button id="pick" class="cs-link">choose a file</button></div>
+        <input id="file" type="file" accept=".csv" hidden />
+        <div id="import-stats" class="cs-stats"></div>
+        <p id="import-errors" class="cs-error" hidden></p>
+      </section>
+      <div class="cs-table-wrap">
+        <table class="cs-table">
+          <thead><tr><th>Bus</th><th>CAN ID</th><th>Frames</th><th>Frames/s</th><th>Len</th><th>Latest data</th></tr></thead>
+          <tbody id="id-tbody"></tbody>
+        </table>
+      </div>
+      <div class="cs-table-wrap">
+        <table class="cs-table">
+          <thead><tr><th>Time</th><th>Bus</th><th>ID</th><th>Dir</th><th>Len</th><th>Data</th></tr></thead>
+          <tbody id="row-tbody"></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>

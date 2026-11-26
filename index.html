@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CANsub JavaScript/TypeScript SDK - Examples</title>
+  <base target="_blank" />
+  <link rel="icon" type="image/png" href="./shared/favicon.png" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; padding: 24px; max-width: 900px; }
+    h1 { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
+    p { font-size: 13px; color: #666; margin-bottom: 16px; line-height: 1.5; }
+    hr { border: none; border-top: 1px solid #dee2e6; margin: 0 0 8px; }
+    ul { list-style: none; }
+    li { padding: 10px 0; border-bottom: 1px solid #f3f4f6; font-size: 14px; }
+    a { color: #3d85c6; font-weight: 600; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    li span { display: block; font-size: 13px; color: #666; margin-top: 2px; }
+    code { font-family: Consolas, Monaco, monospace; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h1>CANsub JavaScript/TypeScript SDK - Examples</h1>
+  <p>Open an example, enter your CANsub URL (e.g. <code>https://2c08fbb4-usb.local</code>) and connect a channel in the sidebar.<br>
+  To test without a vehicle or machine, connect CAN1 to CAN2 and replay <code>sample-data/canmod-temp.csv</code> on CAN2 (see the README).</p>
+  <hr>
+  <ul>
+    <li><a href="/examples/starter/">starter</a><span>The template for your own app: Sidebar, signal picker and a table of live signal values.</span></li>
+    <li><a href="/examples/signal-chart/">signal-chart</a><span>Decode signals with DBC files and plot them live, from any message and channel.</span></li>
+    <li><a href="/examples/frame-table/">frame-table</a><span>The newest raw CAN frames of every connected channel.</span></li>
+    <li><a href="/examples/message-summary/">message-summary</a><span>One row per CAN ID with frame count, frame rate and the latest data.</span></li>
+    <li><a href="/examples/csv-files/">csv-files</a><span>Export the stored frames as CSV and import CSV files, in webCAN's format.</span></li>
+    <li><a href="/examples/filtered-trace/">filtered-trace</a><span>A time-sorted trace across channels, filtered by CAN ID.</span></li>
+    <li><a href="/examples/raw-frame-viewer/">raw-frame-viewer</a><span>The minimal integration without the UI kit: stream frames and show the most recent one.</span></li>
+    <li><a href="/examples/device-config/">device-config</a><span>Configure the device through the REST API only, without the UI kit: device info, time sync and bit rate.</span></li>
+    <li><a href="/examples/bitrate-autodetect/">bitrate-autodetect</a><span>Find the bit rate of an unknown bus, without the UI kit: REST client and WebSocket client together.</span></li>
+  </ul>
+  <p style="margin-top: 16px">Your own app is just another folder: Copy <code>examples/starter/</code> to <code>examples/my-app/</code> and open <code>/examples/my-app/</code>. <code>npm run build -- my-app</code> turns it into one self-contained file, <code>dist/my-app.html</code>.</p>
+</body>
+</html>

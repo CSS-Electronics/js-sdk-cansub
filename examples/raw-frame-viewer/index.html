@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CANsub App - Raw Frame Viewer</title>
+  <link rel="icon" type="image/png" href="../../shared/favicon.png" />
+  <style>
+    .grid { display: grid; grid-template-columns: 110px 1fr; row-gap: 8px; column-gap: 16px; font-family: var(--cs-mono); }
+    .grid .k { color: var(--cs-muted); }
+    .grid .data { word-break: break-all; }
+    .hint { color: var(--cs-muted); font-size: 12px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <main class="cs-main" style="max-width: 900px">
+    <h1>Raw frame viewer</h1>
+    <p class="cs-subtitle">The minimal integration, with <code>@csselectronics/websocket-client</code> only: Stream raw frames from one channel and show the most recent one. No storage, decoding or UI kit.</p>
+    <div id="connect-bar"></div>
+    <div id="status" class="cs-muted"></div>
+    <div class="cs-stats">
+      <div>Frames: <b id="total">0</b></div>
+      <div>Batches/s: <b id="bps">0.0</b></div>
+    </div>
+    <div class="cs-card">
+      <h2 class="cs-section-title">Most recent frame</h2>
+      <div class="grid">
+        <div class="k">Bus</div>        <div id="latest-bus">-</div>
+        <div class="k">CAN ID</div>     <div id="latest-id">-</div>
+        <div class="k">Direction</div>  <div id="latest-dir">-</div>
+        <div class="k">Length</div>     <div id="latest-len">-</div>
+        <div class="k">Data bytes</div> <div class="data" id="latest-data">-</div>
+        <div class="k">Timestamp</div>  <div id="latest-epoch">-</div>
+      </div>
+    </div>
+    <p class="hint">Swap the rendering in <code>main.ts</code> for a data bridge, an HTTP POST, a database write or any other consumer of the frame stream.</p>
+  </main>
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>

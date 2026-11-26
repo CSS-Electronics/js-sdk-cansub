@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CANsub App - Message Summary</title>
+  <link rel="icon" type="image/png" href="../../shared/favicon.png" />
+</head>
+<body>
+  <div class="cs-app">
+    <aside id="sidebar"></aside>
+    <main class="cs-main">
+      <h1>Message summary</h1>
+      <p class="cs-subtitle">One row per CAN ID with frame count, frame rate and the latest data.</p>
+      <div class="cs-stats">
+        <div>CAN IDs: <b id="msg-count">0</b></div>
+        <div>Frames: <b id="frame-count">0</b></div>
+        <div>Frames/s: <b id="fps">0</b></div>
+      </div>
+      <div id="channel-status" class="cs-stats"></div>
+      <div class="cs-table-wrap">
+        <table class="cs-table">
+          <thead><tr><th>Bus</th><th>CAN ID</th><th>Frames</th><th>Frames/s</th><th>Len</th><th>Latest data</th><th>Last seen</th></tr></thead>
+          <tbody id="msg-tbody"></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CANsub App - Bit-rate Auto-detect</title>
+  <link rel="icon" type="image/png" href="../../shared/favicon.png" />
+  <style>
+    .actions { display: flex; gap: 8px; }
+    .actions .cs-btn { width: 110px; }
+    td.ok { color: #16a34a; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="cs-main" style="max-width: 900px">
+    <h1>Bit-rate auto-detect</h1>
+    <p class="cs-subtitle">Find the bit rate of an unknown bus: Try each common bit rate in listen-only mode until valid frames arrive, then set it on the device. Combines <code>@csselectronics/rest-client</code> (PHY settings) and <code>@csselectronics/websocket-client</code> (listening). Copy <code>detectBitrate()</code> from <code>main.ts</code> into your own app.</p>
+    <div id="connect-bar"></div>
+    <div id="status"></div>
+    <div class="actions">
+      <button id="stop" class="cs-btn cs-btn-danger" hidden>stop</button>
+      <button id="again" class="cs-btn cs-btn-secondary" hidden>detect again</button>
+    </div>
+    <div class="cs-table-wrap">
+      <table class="cs-table">
+        <thead><tr><th>#</th><th>Bit rate</th><th>Data bit rate</th><th>Sample point</th><th>Result</th></tr></thead>
+        <tbody id="attempts"></tbody>
+      </table>
+    </div>
+  </main>
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>

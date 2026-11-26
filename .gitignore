@@ -1,0 +1,7 @@
+node_modules/
+dist/
+docs-for-ai/
+.venv/
+.playwright-mcp/
+# A template: the lockfile is created on your first install.
+package-lock.json
